@@ -19,7 +19,7 @@ const router = [
     element: <WhyBiom />,
   },
   {
-    path: "/scent",
+    path: "/scents",
     element: <Scents />,
   },
   {

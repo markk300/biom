@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         green: "#004A4C",
         darkGreen: "#002D33",
+        dark: "#000000",
         siva1: "#F3F4F6",
       },
       padding: {
