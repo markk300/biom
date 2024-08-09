@@ -25,7 +25,7 @@ export const Navbar = () => {
           </div>
 
           <div className="flex-shrink-0">
-            <Link to="/" className="text-dark text-[26px] font-bold text-xl">
+            <Link to="/" className="text-darkGreen text-[36px] font-bold text-xl">
               biom
             </Link>
           </div>
