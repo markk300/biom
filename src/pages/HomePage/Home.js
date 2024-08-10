@@ -1,6 +1,7 @@
 import React from 'react'
 import { Hero } from './Hero'
 import { RedefineExpirience } from './RedefineExpirience'
+import { ImageSlider } from './ImageSlider'
 
 export const Home = () => {
   return (
@@ -10,6 +11,9 @@ export const Home = () => {
       </div>
       <div className=''>
         <RedefineExpirience />
+      </div>
+      <div className=''>
+        <ImageSlider />
       </div>
     </div>
   )
