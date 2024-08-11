@@ -3,6 +3,7 @@ import { Hero } from './Hero'
 import { RedefineExpirience } from './RedefineExpirience'
 import { ImageSlider } from './ImageSlider'
 import { ChooseCollor } from './ChooseCollor'
+import { PeopleSaying } from './PeopleSaying'
 
 export const Home = () => {
   return (
@@ -16,8 +17,11 @@ export const Home = () => {
       <div className='mt-10'>
         <ImageSlider />
       </div>
-      <div className="mt-20">
+      <div className="mt-28 ">
         <ChooseCollor />
+      </div>
+      <div className="">
+        <PeopleSaying />
       </div>
     </div>
   )

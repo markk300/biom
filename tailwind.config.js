@@ -10,7 +10,7 @@ module.exports = {
         green: "#004A4C",
         darkGreen: "#002D33",
         dark: "#000000",
-        siva1: "#F3F4F6",
+        siva1: "#F2F2F2",
       },
       padding: {
         DEFAULT: "1rem",

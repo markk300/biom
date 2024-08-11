@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export const ChooseCollor = () => {
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col items-center px-4">
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center px-4 md:px-16">
         <div className="flex flex-col items-center md:items-start">
           <h2 className="text-3xl font-bold mb-4 w-[300px] text-center md:text-left">
