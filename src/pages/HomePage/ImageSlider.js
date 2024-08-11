@@ -54,11 +54,11 @@ export const ImageSlider = () => {
         className="w-full h-[350px] z-10"
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="overflow-hidden rounded-2xl">
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
             />
           </SwiperSlide>
         ))}
