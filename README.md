@@ -61,6 +61,7 @@ project-name/
 ├── package.json # Project dependencies and scripts
 └── README.md # Project documentation
 ```
-
+# Estimated Time
+The estimated time to complete this project is 6 hours.
 
 
