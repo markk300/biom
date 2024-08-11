@@ -4,6 +4,7 @@ import { RedefineExpirience } from './RedefineExpirience'
 import { ImageSlider } from './ImageSlider'
 import { ChooseCollor } from './ChooseCollor'
 import { PeopleSaying } from './PeopleSaying'
+import { CleanOceans } from './CleanOceans'
 
 export const Home = () => {
   return (
@@ -22,6 +23,9 @@ export const Home = () => {
       </div>
       <div className="">
         <PeopleSaying />
+      </div>
+      <div className="">
+        <CleanOceans />
       </div>
     </div>
   )
