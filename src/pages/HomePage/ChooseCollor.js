@@ -7,10 +7,10 @@ import { FaArrowRight } from "react-icons/fa";
 
 export const ChooseCollor = () => {
   return (
-    <div className="flex flex-col items-center px-4">
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center px-4 md:px-16">
-        <div className="flex flex-col items-center md:items-start">
-          <h2 className="text-3xl font-bold mb-4 w-[300px] text-center md:text-left">
+    <div className="flex flex-col items-center p-4">
+      <div className="flex space-x-4 items-center px-16">
+        <div className="flex flex-col">
+          <h2 className="text-3xl font-bold mb-4 w-[300px]">
             Ready to start wiping out waste?
           </h2>
           <div className="flex flex-row mt-5 group">
@@ -20,7 +20,7 @@ export const ChooseCollor = () => {
             >
               CHOOSE YOUR VESSEL COLOR
             </Link>
-            <div className="w-12 h-12 flex items-center justify-center border-2 border-l-0 text-2xl border-green text-green rounded-r-md">
+            <div className="w-12 h-12 flex items-center justify-center border-2 border-l-0 text-2xl border-green text-green rounded-r-md ">
               <FaArrowRight className="transition-all group-hover:translate-x-1"/>
             </div>
           </div>

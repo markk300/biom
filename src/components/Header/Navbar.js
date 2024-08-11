@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-white py-4">
+    <nav
+      className={`fixed w-full z-50 transition duration-300 ease-in-out ${
+        isScrolled ? "bg-white bg-opacity-70" : "bg-white"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="hidden md:flex space-x-4">
@@ -25,18 +41,24 @@ export const Navbar = () => {
           </div>
 
           <div className="flex-shrink-0">
-            <Link to="/" className="text-darkGreen text-[36px] font-bold text-xl">
+            <Link
+              to="/"
+              className="text-darkGreen text-[36px] font-bold text-xl"
+            >
               biom
             </Link>
           </div>
 
           <div className="hidden md:flex">
-            <Link
-              to={rightNavLink.path}
-              className="text-dark hover:bg-gray-200 px-3 py-2 rounded-md text-[15px] font-medium font-playfair"
-            >
-              {rightNavLink.text}
-            </Link>
+            {rightNavLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.path}
+                className="text-dark hover:bg-gray-200 px-3 py-2 rounded-md text-[15px] font-medium font-playfair"
+              >
+                {link.text}
+              </Link>
+            ))}
           </div>
 
           <div className="md:hidden flex items-center">
@@ -78,12 +100,15 @@ export const Navbar = () => {
                 {link.text}
               </Link>
             ))}
-            <Link
-              to={rightNavLink.path}
-              className="text-gray-700 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium"
-            >
-              {rightNavLink.text}
-            </Link>
+            {rightNavLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.path}
+                className="text-gray-700 hover:bg-gray-200 block px-3 py-2 rounded-md text-base font-medium"
+              >
+                {link.text}
+              </Link>
+            ))}
           </div>
         </div>
       )}
@@ -97,4 +122,7 @@ const leftNavLinks = [
   { path: "/scents", text: "Scents" },
 ];
 
-const rightNavLink = { path: "/chart", text: "Chart" };
+const rightNavLinks = [
+  { path: "/chart", text: "Chart" },
+  { path: "/signIn", text: "Sign In" },
+];
